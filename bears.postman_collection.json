@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "a3ac395c-389e-48c9-892d-682684a57022",
+		"name": "bears",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Bear",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "aCoolBear",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/bears?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bears"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "stupid",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "hello",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api"
+					]
+				},
+				"description": "Test/Intro"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Bears",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/bears",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bears"
+					]
+				},
+				"description": "Get all ids of the bears"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Bear By bear_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/bears/5d53192a5e447a180c274689",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bears",
+						"5d53192a5e447a180c274689"
+					]
+				},
+				"description": "Find a bear's information by its bear_id"
+			},
+			"response": []
+		},
+		{
+			"name": "Change Bear name",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "aDifferentBearName\n",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/bears/5d531b6df949521810819f29?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bears",
+						"5d531b6df949521810819f29"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "goodbye",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Change a bear's name"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Bear",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/bears/5d53192a5e447a180c274689",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bears",
+						"5d53192a5e447a180c274689"
+					]
+				},
+				"description": "Deletes a bear from the database"
+			},
+			"response": []
+		}
+	]
+}
