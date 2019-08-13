@@ -1,5 +1,18 @@
-## Dependencies
+## Dependencies (see package.json)
 * Node
-* Express
-* Mongoose
-* Body-parser
+* Express (Node framework)
+* Mongoose (ORM which will speak to MongoDB)
+* Body-parser (handles POST content from HTTP requests)
+* MongoDB (Ran locally in this example)
+
+# TODO:
+* Better notes
+* Newer version
+* Cloud hosted database
+
+
+# Notes:
+Starting MongoDB from (my) terminal/cmd prompt:
+"C:\Program Files\MongoDB\Server\4.2\bin\mongod.exe" --dbpath="C:\Users\z p\Desktop\prog\data\db"
+
+"create, read, update, and delete (CRUD) are the four basic functions of persistent storage. Alternate words are sometimes used when defining the four basic functions of CRUD, such as retrieve instead of read, modify instead of update, or destroy instead of delete." - wikipedia
